@@ -12,10 +12,11 @@ with st.sidebar:
     st.write('Nama : Danan Rukmana')
     st.write('Gmail : gmgdanan@gmail.com')
     st.write('project analisis penyewaan sepeda')
-
-df1 = pd.read_csv('dbs/dataset/hour.csv')
+url1 = "https://raw.githubusercontent.com/DananRukmana/DananRukmana/refs/heads/main/hour.csv"
+url2 = "https://raw.githubusercontent.com/DananRukmana/DananRukmana/refs/heads/main/day.csv"
+df1 = pd.read_csv('url1')
 df_hour = pd.DataFrame(df1)
-df2 = pd.read_csv('dbs/dataset/day.csv')
+df2 = pd.read_csv('url2')
 df_day = pd.DataFrame(df2)
 
 jam_sibuk = df_hour.groupby('hr')['cnt'].sum()
